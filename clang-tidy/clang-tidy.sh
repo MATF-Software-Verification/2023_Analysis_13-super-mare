@@ -1,12 +1,10 @@
 #!/bin/bash
 
-# Define the necessary directories relative to the current directory (clang-tidy)
 CURRENT_DIR=$(pwd)
 PROJECT_DIR="${CURRENT_DIR}/../super-mare/SuperMare"
 BUILD_DIR="${CURRENT_DIR}/../build"
 OUTPUT_FILE="${CURRENT_DIR}/clang-tidy-output.txt"
 
-# Run clang-tidy for all .cpp and .h files in the project
 find "${PROJECT_DIR}" \( -name "*.cpp" -o -name "*.h" \) -print0 \
   | xargs -0 -n 1 clang-tidy \
       -p "${BUILD_DIR}" \
