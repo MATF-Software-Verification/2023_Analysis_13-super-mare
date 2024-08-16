@@ -1,0 +1,84 @@
+Flawfinder version 2.0.19, (C) 2001-2019 David A. Wheeler.
+Number of rules (primarily dangerous function names) in C/C++ ruleset: 222
+Examining ../super-mare/SuperMare/deadlyenemy.h
+Examining ../super-mare/SuperMare/coin.cpp
+Examining ../super-mare/SuperMare/ground.cpp
+Examining ../super-mare/SuperMare/background.h
+Examining ../super-mare/SuperMare/game.h
+Examining ../super-mare/SuperMare/ranglist.h
+Examining ../super-mare/SuperMare/score.cpp
+Examining ../super-mare/SuperMare/weakenemy.h
+Examining ../super-mare/SuperMare/life.cpp
+Examining ../super-mare/SuperMare/soundmanager.cpp
+Examining ../super-mare/SuperMare/player.h
+Examining ../super-mare/SuperMare/ranglist.cpp
+Examining ../super-mare/SuperMare/key.h
+Examining ../super-mare/SuperMare/life.h
+Examining ../super-mare/SuperMare/health.cpp
+Examining ../super-mare/SuperMare/main.cpp
+Examining ../super-mare/SuperMare/mainwindow.cpp
+Examining ../super-mare/SuperMare/ground.h
+Examining ../super-mare/SuperMare/friend.h
+Examining ../super-mare/SuperMare/friend.cpp
+Examining ../super-mare/SuperMare/gameOverOptions.h
+Examining ../super-mare/SuperMare/soundmanager.h
+Examining ../super-mare/SuperMare/deadlyenemy.cpp
+Examining ../super-mare/SuperMare/key.cpp
+Examining ../super-mare/SuperMare/speed.h
+Examining ../super-mare/SuperMare/widget.h
+Examining ../super-mare/SuperMare/game.cpp
+Examining ../super-mare/SuperMare/mainwindow.h
+Examining ../super-mare/SuperMare/coin.h
+Examining ../super-mare/SuperMare/health.h
+Examining ../super-mare/SuperMare/playerposition.h
+Examining ../super-mare/SuperMare/weakenemy.cpp
+Examining ../super-mare/SuperMare/score.h
+Examining ../super-mare/SuperMare/player.cpp
+Examining ../super-mare/SuperMare/enemy.h
+Examining ../super-mare/SuperMare/widget.cpp
+Examining ../super-mare/SuperMare/enemy.cpp
+Examining ../super-mare/SuperMare/LevelNum.h
+Examining ../super-mare/SuperMare/background.cpp
+
+FINAL RESULTS:
+
+../super-mare/SuperMare/game.cpp:154:  [2] (misc) open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (CWE-362).
+../super-mare/SuperMare/game.cpp:237:  [2] (misc) open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (CWE-362).
+../super-mare/SuperMare/ranglist.cpp:32:  [2] (misc) open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (CWE-362).
+../super-mare/SuperMare/ranglist.cpp:87:  [2] (misc) open:
+  Check when opening files - can an attacker redirect it (via symlinks),
+  force the opening of special file type (e.g., device files), move things
+  around to create a race condition, control its ancestors, or change its
+  contents? (CWE-362).
+
+ANALYSIS SUMMARY:
+
+Hits = 4
+Lines analyzed = 1570 in approximately 0.03 seconds (59524 lines/second)
+Physical Source Lines of Code (SLOC) = 1219
+Hits@level = [0]   0 [1]   0 [2]   4 [3]   0 [4]   0 [5]   0
+Hits@level+ = [0+]   4 [1+]   4 [2+]   4 [3+]   0 [4+]   0 [5+]   0
+Hits/KSLOC@level+ = [0+] 3.28138 [1+] 3.28138 [2+] 3.28138 [3+]   0 [4+]   0 [5+]   0
+Minimum risk level = 1
+
+Not every hit is necessarily a security vulnerability.
+You can inhibit a report by adding a comment in this form:
+// flawfinder: ignore
+Make *sure* it's a false positive!
+You can use the option --neverignore to show these.
+
+There may be other security vulnerabilities; review your code!
+See 'Secure Programming HOWTO'
+(https://dwheeler.com/secure-programs) for more information.
