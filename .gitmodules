@@ -1,3 +1,6 @@
 [submodule "super-mare"]
 	path = super-mare
 	url = https://gitlab.com/matf-bg-ac-rs/course-rs/projects-2022-2023/13-super-mare
+[submodule "perf/FlameGraph"]
+	path = perf/FlameGraph
+	url = https://github.com/brendangregg/FlameGraph.git
