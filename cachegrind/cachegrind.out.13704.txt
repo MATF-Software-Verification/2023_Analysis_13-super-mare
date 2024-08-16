@@ -1,0 +1,142 @@
+--------------------------------------------------------------------------------
+-- Metadata
+--------------------------------------------------------------------------------
+Invocation:       /usr/bin/cg_annotate cachegrind.out.13704
+Command:          ../build/SuperMare
+Events recorded:  Ir
+Events shown:     Ir
+Event sort order: Ir
+Threshold:        0.1%
+Annotation:       on
+
+--------------------------------------------------------------------------------
+-- Summary
+--------------------------------------------------------------------------------
+Ir______________________ 
+
+132,364,977,127 (100.0%)  PROGRAM TOTALS
+
+--------------------------------------------------------------------------------
+-- File:function summary
+--------------------------------------------------------------------------------
+  Ir____________________________  file:function
+
+< 114,469,023,275 (86.5%, 86.5%)  ???:
+   85,684,621,733 (64.7%)           ???
+   16,200,165,356 (12.2%)           adler32_z
+    3,433,783,576  (2.6%)           QPainterPath::computeControlPointRect() const
+    2,188,558,048  (1.7%)           crc32_z
+    1,737,943,174  (1.3%)           QPainterPath::translate(double, double)
+    1,196,842,844  (0.9%)           inflate
+      309,009,104  (0.2%)           QRectF::contains(QPointF const&) const
+      206,159,301  (0.2%)           QGraphicsItem::collidesWithPath(QPainterPath const&, Qt::ItemSelectionMode) const
+      201,450,289  (0.2%)           QPlatformPixmap::mask() const
+      197,556,802  (0.1%)           QPainterPath::detach()
+      165,602,997  (0.1%)           QArrayData::allocate(QArrayData**, long long, long long, long long, QArrayData::AllocationOption)
+      164,994,480  (0.1%)           QTransform::map(QPainterPath const&) const
+      159,205,200  (0.1%)           QGraphicsItem::itemTransform(QGraphicsItem const*, bool*) const
+      158,043,774  (0.1%)           QRegion::QRegion(QBitmap const&)
+      150,449,818  (0.1%)           QPainterPath::lineTo(QPointF const&)
+      136,357,526  (0.1%)           QPainterPath::~QPainterPath()
+
+<  15,554,536,356 (11.8%, 98.2%)  ./string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:
+   15,554,333,032 (11.8%)           __memcpy_avx_unaligned_erms
+
+<   1,981,603,840  (1.5%, 99.7%)  ./malloc/./malloc/malloc.c:
+      675,391,234  (0.5%)           _int_malloc
+      379,057,479  (0.3%)           _int_free
+      335,450,700  (0.3%)           malloc
+      193,106,511  (0.1%)           free
+      176,601,309  (0.1%)           _int_free_merge_chunk
+      138,433,444  (0.1%)           unlink_chunk.isra.0
+
+<     198,619,990  (0.2%, 99.9%)  ./string/../sysdeps/x86_64/multiarch/memset-vec-unaligned-erms.S:
+      198,593,187  (0.2%)           __memset_avx2_unaligned_erms
+
+--------------------------------------------------------------------------------
+-- Function:file summary
+--------------------------------------------------------------------------------
+  Ir___________________________  function:file
+
+> 85,684,735,445 (64.7%, 64.7%)  ???:
+  85,684,621,733 (64.7%)           ???
+
+> 16,200,165,356 (12.2%, 77.0%)  adler32_z:???
+
+> 15,554,333,032 (11.8%, 88.7%)  __memcpy_avx_unaligned_erms:./string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+
+>  3,433,783,576  (2.6%, 91.3%)  QPainterPath::computeControlPointRect() const:???
+
+>  2,188,558,048  (1.7%, 93.0%)  crc32_z:???
+
+>  1,737,943,174  (1.3%, 94.3%)  QPainterPath::translate(double, double):???
+
+>  1,196,842,844  (0.9%, 95.2%)  inflate:???
+
+>    675,392,458  (0.5%, 95.7%)  _int_malloc:
+     675,391,234  (0.5%)           ./malloc/./malloc/malloc.c
+
+>    379,057,479  (0.3%, 96.0%)  _int_free:./malloc/./malloc/malloc.c
+
+>    343,460,483  (0.3%, 96.2%)  malloc:
+     335,450,700  (0.3%)           ./malloc/./malloc/malloc.c
+
+>    309,009,104  (0.2%, 96.5%)  QRectF::contains(QPointF const&) const:???
+
+>    229,632,967  (0.2%, 96.7%)  free:
+     193,106,511  (0.1%)           ./malloc/./malloc/malloc.c
+
+>    206,159,301  (0.2%, 96.8%)  QGraphicsItem::collidesWithPath(QPainterPath const&, Qt::ItemSelectionMode) const:???
+
+>    201,450,289  (0.2%, 97.0%)  QPlatformPixmap::mask() const:???
+
+>    198,593,187  (0.2%, 97.1%)  __memset_avx2_unaligned_erms:./string/../sysdeps/x86_64/multiarch/memset-vec-unaligned-erms.S
+
+>    197,556,802  (0.1%, 97.3%)  QPainterPath::detach():???
+
+>    176,601,309  (0.1%, 97.4%)  _int_free_merge_chunk:./malloc/./malloc/malloc.c
+
+>    165,602,997  (0.1%, 97.5%)  QArrayData::allocate(QArrayData**, long long, long long, long long, QArrayData::AllocationOption):???
+
+>    164,994,480  (0.1%, 97.6%)  QTransform::map(QPainterPath const&) const:???
+
+>    159,205,200  (0.1%, 97.8%)  QGraphicsItem::itemTransform(QGraphicsItem const*, bool*) const:???
+
+>    158,043,774  (0.1%, 97.9%)  QRegion::QRegion(QBitmap const&):???
+
+>    150,449,818  (0.1%, 98.0%)  QPainterPath::lineTo(QPointF const&):???
+
+>    138,433,444  (0.1%, 98.1%)  unlink_chunk.isra.0:./malloc/./malloc/malloc.c
+
+>    136,357,526  (0.1%, 98.2%)  QPainterPath::~QPainterPath():???
+
+--------------------------------------------------------------------------------
+-- Annotated source file: ./malloc/./malloc/malloc.c
+--------------------------------------------------------------------------------
+Unannotated because one or more of these original files are unreadable:
+- ./malloc/./malloc/malloc.c
+
+--------------------------------------------------------------------------------
+-- Annotated source file: ./string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+--------------------------------------------------------------------------------
+Unannotated because one or more of these original files are unreadable:
+- ./string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S
+
+--------------------------------------------------------------------------------
+-- Annotated source file: ./string/../sysdeps/x86_64/multiarch/memset-vec-unaligned-erms.S
+--------------------------------------------------------------------------------
+Unannotated because one or more of these original files are unreadable:
+- ./string/../sysdeps/x86_64/multiarch/memset-vec-unaligned-erms.S
+
+--------------------------------------------------------------------------------
+-- Annotation summary
+--------------------------------------------------------------------------------
+Ir_____________________ 
+
+              0            annotated: files known & above threshold & readable, line numbers known
+              0            annotated: files known & above threshold & readable, line numbers unknown
+              0          unannotated: files known & above threshold & two or more non-identical
+ 17,734,760,186 (13.4%)  unannotated: files known & above threshold & unreadable 
+    161,193,666  (0.1%)  unannotated: files known & below threshold
+114,469,023,275 (86.5%)  unannotated: files unknown
+
